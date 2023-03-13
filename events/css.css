@@ -1,0 +1,25 @@
+
+#field {
+  width: 200px;
+  height: 150px;
+  border: 10px solid black;
+  background-color: #00FF00;
+  overflow: hidden;
+}
+
+#menu-list {
+	display: none;
+}
+
+#menu-list.open {
+	display: inline-block;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+}
+
+#menu.open .icon {
+	rotate: 90deg;
+}

@@ -20,6 +20,156 @@
 	flex-direction: column;
 }
 
-#menu.open .icon {
-	rotate: 90deg;
+#menu {
+	display: inline-block;
+	width: 250px;
+	height: 20px;
 }
+
+.icon.open {
+	display: none;
+}
+
+
+h3 {
+	margin: 0;
+	padding-bottom: .3em;
+	font-size: 1.1em;
+ }
+ 
+ p {
+	margin: 0;
+	padding: 0 0 .5em;
+ }
+ 
+ .pane {
+	background: #edf5e1;
+	padding: 10px 20px 10px;
+	border-top: solid 2px #c4df9b;
+ }
+ 
+ .remove-button {
+	font-size: 110%;
+	color: darkred;
+	right: 10px;
+	width: 24px;
+	height: 24px;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+ }
+
+ .arrow {
+	padding: 0;
+	background: #ddd;
+	border-radius: 15px;
+	border: 1px solid gray;
+	font-size: 24px;
+	line-height: 24px;
+	color: #444;
+	display: block;
+ }
+ 
+ .arrow:focus {
+	outline: none;
+ }
+ 
+ .arrow:hover {
+	background: #ccc;
+	cursor: pointer;
+ }
+ 
+.gallery-list {
+	height: 130px;
+	width: 9999px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 0;
+ }
+ 
+ .gallery-list img {
+	width: 130px;
+	height: 130px;
+	display: block; /* убираем пустое место вокруг картинок */
+ }
+ 
+ .gallery-list li {
+	display: inline-block; /* убираем пустое место между элементами списка */
+ }
+
+ .gallery__item {
+	display: inline-block;
+ }
+
+
+ .gallery{
+	display: flex;
+	align-items: center;
+	width: 430px;
+	position: relative;
+ }
+
+ .carousel {
+	width: 480px;
+	height: 130px;
+	overflow: hidden;
+
+
+ }
+
+ .pane-new {
+	background: #edf5e1;
+	padding: 10px 20px 10px;
+	border-top: solid 2px #c4df9b;
+	position: relative;
+ }
+ 
+ .remove-btn {
+	position: absolute;
+	font-size: 110%;
+	top: 0;
+	color: darkred;
+	right: 10px;
+	display: block;
+	width: 24px;
+	height: 24px;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+ }
+
+ .tree ul.open {
+	display: none;
+ }
+
+ .tooltip {
+	/* немного стилизуем подсказку, можете использовать свои стили вместо этих */
+	position: fixed;
+	padding: 10px 20px;
+	border: 1px solid #b3c9ce;
+	border-radius: 4px;
+	text-align: center;
+	font: italic 14px/1.3 sans-serif;
+	color: #333;
+	background: #fff;
+	box-shadow: 3px 3px 3px rgba(0, 0, 0, .3);
+ }
+
+ .document {
+	height: 200px;
+	
+ }
+
+ #contents {
+	padding: 5px;
+	border: 1px green solid;
+ }
+
+ #thumbs {
+	display: flex;
+	gap: 10px;
+	list-style: none;
+	padding: 0;
+ }
+

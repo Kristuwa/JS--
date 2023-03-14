@@ -91,12 +91,75 @@ function onFieldClick(e) {
 /*Создать меню, которое по нажатию открывается либо закрывается:*/
 const btnMenu = document.querySelector("#menu");
 const list = document.querySelector("#menu-list");
-
+const icons = document.querySelectorAll(".icon");
 btnMenu.addEventListener("click", onOpenMenu);
 
 function onOpenMenu() {
-  btnMenu.classList.toggle("open");
   list.classList.toggle("open");
+  [...icons].map((icon) => {
+    if (icon.classList.contains("open")) {
+      icon.classList.remove("open");
+    } else {
+      icon.classList.add("open");
+    }
+  });
 }
 //-------------------task-6-------------------//
+
+/*Есть список сообщений.
+
+При помощи JavaScript для каждого сообщения добавьте в верхний правый угол кнопку закрытия.
+
+Результат должен выглядеть, как показано здесь:
+<button class="remove-button">[x]</button>*/
+
+let panes = document.querySelectorAll(".pane");
+
+[...panes].map((pane) => {
+  let btn = document.createElement("button");
+  btn.classList.add("remove-button");
+  btn.textContent = "[x]";
+  pane.style.position = "relative";
+  btn.style.cssText = `position: absolute;
+  top:10px;right: 10px`;
+  pane.insertAdjacentElement("afterbegin", btn);
+  btn.addEventListener("click", onCloseBtn);
+});
+
+function onCloseBtn(e) {
+  const pane = e.target.closest("div");
+  console.log(pane);
+  if (e.currentTarget === e.target) {
+    pane.style.display = "none";
+  }
+}
 //-------------------task-7-------------------//
+/*Карусель
+важность: 4
+Создайте «Карусель» –- ленту изображений, которую можно листать влево-вправо нажатием на стрелочки.*/
+let btnArrowLeft = document.querySelector(".arrow-left");
+let btnArrowRight = document.querySelector(".arrow-right");
+let gallery = document.querySelector(".gallery-list");
+let galleryItem = Array.from(document.querySelectorAll(".gallery__item"));
+let countLi = galleryItem.length - 3;
+
+btnArrowLeft.addEventListener("click", onLeftClick);
+btnArrowRight.addEventListener("click", onRightClick);
+
+let position = 0;
+
+function onLeftClick() {
+  position -= 130;
+  if (position < -(countLi * 130)) {
+    position = -(countLi * 130);
+  }
+  gallery.style.cssText = `transform: translateX(${position}px);`;
+}
+
+function onRightClick() {
+  position += 130;
+  if (position > 0) {
+    position = 0;
+  }
+  gallery.style.cssText = `transform:translateX(${position}px)`;
+}

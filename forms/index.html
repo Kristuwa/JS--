@@ -21,7 +21,157 @@
 	 <p class="title">HTML-код разрешён.</p>
   
 	 <div id="view" class="view">Текст</div>
+	 <hr>
+	 <br>
+	 
+	 <p>Кликните на ячейку таблицы, чтобы редактировать её. Нажмите ОК или ОТМЕНА, когда закончите.</p>
+
+	 <table id="bagua-table">
+		<tr>
+		  <th colspan="3">Квадрат <em>Bagua</em>: Направление, Элемент, Цвет, Значение</th>
+		</tr>
+		<tr>
+		  <td class="nw"><strong>Северо-Запад</strong>
+			 <br>Металл
+			 <br>Серебро
+			 <br>Старейшины
+		  </td>
+		  <td class="n"><strong>Север</strong>
+			 <br>Вода
+			 <br>Синий
+			 <br>Перемены
+		  </td>
+		  <td class="ne"><strong>Северо-Восток</strong>
+			 <br>Земля
+			 <br>Жёлтый
+			 <br>Направление
+		  </td>
+		</tr>
+		<tr>
+		  <td class="w"><strong>Запад</strong>
+			 <br>Металл
+			 <br>Золото
+			 <br>Молодость
+		  </td>
+		  <td class="c"><strong>Центр</strong>
+			 <br>Всё
+			 <br>Пурпурный
+			 <br>Гармония
+		  </td>
+		  <td class="e"><strong>Восток</strong>
+			 <br>Дерево
+			 <br>Синий
+			 <br>Будущее
+		  </td>
+		</tr>
+		<tr>
+		  <td class="sw"><strong>Юго-Запад</strong>
+			 <br>Земля
+			 <br>Коричневый
+			 <br>Спокойствие
+		  </td>
+		  <td class="s"><strong>Юг</strong>
+			 <br>Огонь
+			 <br>Оранжевый
+			 <br>Слава
+		  </td>
+		  <td class="se"><strong>Юго-Восток</strong>
+			 <br>Дерево
+			 <br>Зеленый
+			 <br>Роман
+		  </td>
+		</tr>
+  <br>
+  <hr>
+</table>
+<div class="mouse-field">
+	<p>Кликните по "изображению" мыши и перемещайте её с помощью клавиш со стрелками.</p>
+
+  <pre id="mouse">
+ _   _
+(q\_/p)
+ /. .\
+=\_t_/=   __
+ /   \   (
+((   ))   )
+/\) (/\  /
+\  Y  /-'
+ nn^nn
+</pre>
+</div>
+  <br><hr>
+  <div class="task-3">
+	Депозитный калькулятор.
+
+	<form name="calculator" class="calculator">
+	  <table>
+		 <tr>
+			<td>Первоначальный депозит</td>
+			<td>
+			  <input name="money" type="number" value="10000" required>
+			</td>
+		 </tr>
+		 <tr>
+			<td>Срок вклада?</td>
+			<td>
+			  <select name="months">
+				 <option value="3">3 (минимум)</option>
+				 <option value="6">6 (полгода)</option>
+				 <option value="12" selected>12 (год)</option>
+				 <option value="18">18 (1.5 года)</option>
+				 <option value="24">24 (2 года)</option>
+				 <option value="30">30 (2.5 года)</option>
+				 <option value="36">36 (3 года)</option>
+				 <option value="60">60 (5 лет)</option>
+			  </select>
+			</td>
+		 </tr>
+		 <tr>
+			<td>Годовая процентная ставка?</td>
+			<td>
+			  <input name="interest" type="number" value="5" required>
+			</td>
+		 </tr>
+	  </table>
+ 
+ 
+	</form>
+ 
+ 
+	<table id="diagram">
+	  <tr>
+		 <th>Было:</th>
+		 <th>Станет:</th>
+	  </tr>
+	  <tr>
+		 <th id="money-before"></th>
+		 <th id="money-after"></th>
+	  </tr>
+	  <td>
+		 <div style="background: red; width:40px; height:100px"></div>
+	  </td>
+	  <td>
+		 <div style="background: green; width:40px; height:0" id="height-after"></div>
+	  </td>
+	</table>
+  </div>
+  <h2>Кликните на кнопку ниже</h2>
+
+  <input type="button" value="Кликните, чтобы увидеть форму" id="show-button">
+
+
+  <div id="prompt-form-container">
+    <form id="prompt-form">
+      <div id="prompt-message"></div>
+      <input name="text" type="text">
+      <input type="submit" value="Ok">
+      <input type="button" name="cancel" value="Отмена">
+    </form>
+  </div>
+
 	<script src="task_forms_1.js" type="module"></script>
 	<script src="task_forms_2.js" type="module"></script>
+	<script src="task_forms_3.js" type="module"></script>
+	<script src="task_forms_4.js" type="module"></script>
 	</body>
 </html>

@@ -23,3 +23,148 @@
   /* удаление обводки фокуса в Safari */
   outline: none;
 }
+
+th {
+	text-align: center;
+	font-weight: bold;
+ }
+ 
+ td {
+	width: 150px;
+	white-space: nowrap;
+	text-align: center;
+	vertical-align: middle;
+	padding: 10px;
+	position: relative;
+ }
+ 
+ .nw {
+	background-color: #999;
+ }
+ 
+ .n {
+	background-color: #03f;
+	color: #fff;
+ }
+ 
+ .ne {
+	background-color: #ff6;
+ }
+ 
+ .w {
+	background-color: #ff0;
+ }
+ 
+ .c {
+	background-color: #60c;
+	color: #fff;
+ }
+ 
+ .e {
+	background-color: #09f;
+	color: #fff;
+ }
+ 
+ .sw {
+	background-color: #963;
+	color: #fff;
+ }
+ 
+ .s {
+	background-color: #f60;
+	color: #fff;
+ }
+ 
+ .se {
+	background-color: #0c3;
+	color: #fff;
+ }
+
+ .textarea {
+	border: none;
+	margin: 0;
+	padding: 0;
+	display: block;
+	resize: none;
+ 	outline: none;
+ 	overflow: auto;
+	
+ }
+
+ .buttons-list {
+	position: absolute;
+	z-index: 3;
+ }
+
+ #mouse {
+	display: inline-block;
+	cursor: pointer;
+	margin: 0;
+ }
+
+ #mouse:focus {
+	outline: 1px dashed black;
+ }
+
+ .mouse-field {
+	height: 2000px;
+ }
+
+ td select,
+ td input {
+	width: 150px;
+ }
+
+ #diagram td {
+	vertical-align: bottom;
+	text-align: center;
+	padding: 10px;
+ }
+
+ #diagram div {
+	margin: auto;
+ }
+
+ #prompt-form {
+	display: inline-block;
+	padding: 5px 5px 5px 70px;
+	width: 200px;
+	border: 1px solid black;
+	background: white url(https://en.js.cx/clipart/prompt.png) no-repeat left 5px;
+	vertical-align: middle;
+ }
+ 
+ #prompt-form-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	display: none;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+ }
+ 
+ #prompt-form-container:before {
+	display: inline-block;
+	height: 100%;
+	content: '';
+	vertical-align: middle;
+ }
+ 
+ #cover-div {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9000;
+	width: 100%;
+	height: 100%;
+	background-color: gray;
+	opacity: 0.3;
+ }
+ 
+ #prompt-form input[name="text"] {
+	display: block;
+	margin: 5px;
+	width: 180px;
+ }
